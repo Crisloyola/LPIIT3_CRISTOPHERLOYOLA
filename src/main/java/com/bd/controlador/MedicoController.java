@@ -25,14 +25,14 @@ public class MedicoController {
     public String listarMedico(Model modelo) {
         List<TblMedico> listado = imedicorepositorio.ListadoMedico();
         modelo.addAttribute("listado", listado);
-        return "/Vista/ListadoMedico";
+        return "Vista/ListadoMedico";
     }
     
     @GetMapping("/RegistrarMedico")
     public String RegistrarMedico(Model modelo) {
         TblMedico tblmed = new TblMedico();
         modelo.addAttribute("regmedico", tblmed);
-        return "/Vista/FrmRegMedico";
+        return "Vista/FrmRegMedico";
     }
 
     @PostMapping("/GuardarMedico")
